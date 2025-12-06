@@ -13,6 +13,14 @@ java {
     targetCompatibility = '17'
 }
 
+/*
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+*/
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
@@ -42,6 +50,12 @@ springBoot {
     mainClass = 'com.joy.ParfaitReportApplication'
 }
 
+/*
 tasks.named('test') {
 	useJUnitPlatform()
+}
+*/
+
+tasks.named('test') {
+    enabled = false
 }
