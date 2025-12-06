@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="CommonMapper">
+    <select id="getCodeList" parameterType="string" resultType="map">
+		SELECT 
+			 *
+		FROM GROUP_CODE_MST GCM 
+		LEFT OUTER JOIN 
+			 GROUP_CODE_SUB GCS 
+		  ON GCM.MST_CD = GCS.MST_CD 
+   		WHERE 1 = 1 
+   		  AND GCM.MST_CD = #{mst_code}
+   		ORDER BY GCS.SORT_ORDER
+    </select>
+</mapper>
+
+
