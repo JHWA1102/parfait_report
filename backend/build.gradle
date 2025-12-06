@@ -47,7 +47,7 @@ dependencies {
 }
 
 springBoot {
-    mainClass = 'com.joy.ParfaitReportApplication'
+    mainClass = 'com.joy.parfaitReport.ParfaitReportApplication'
 }
 
 /*
