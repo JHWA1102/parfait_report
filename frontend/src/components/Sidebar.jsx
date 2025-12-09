@@ -1,187 +1,110 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Sidebar() {
-  const [open, setOpen] = useState(true);
-  const [submenu, setSubmenu] = useState({
-    dashboard: false,
-    member: false,
-    order: false,
-    product: false,
-    setting: false,
-  });
+export default function SidebarRight() {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => setOpen(!open);
 
-  const toggleMenu = (key) => {
-    setSubmenu((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+  const menus = [
+    { name: "재무상태표", path: "/balanceSheet" },
+    { name: "적금계산기" },
+    { name: "고정비관리" },
+  ];
+
+  // 메뉴 클릭 핸들러
+  const handleMenuClick = (path) => {
+    navigate(path);
+    setOpen(false); // 클릭 후 사이드바 닫기
   };
 
   return (
     <>
-      {/* Toggle Button */}
-      <button
-        onClick={toggleSidebar}
-        className="fixed top-20 left-2 z-50 bg-indigo-600 text-white px-3 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition"
-      >
-        {open ? "Hide" : "Show"}
-      </button>
+      {/* 🔘 오른쪽 토글 버튼 (헤더 아래에 배치) — 가시성 강화 버전 */}
+      {!open && (
+        <button
+          onClick={toggleSidebar}
+          className="
+            fixed top-20 right-4 z-40
+            bg-white border border-[#EEEEEE]
+            p-2 rounded-md shadow-sm
+            hover:bg-[#F7F7F7] hover:border-[#929AAB]
+            transition flex items-center justify-center
+          "
+        >
+          {/* 명확한 햄버거 아이콘 */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#393E46"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 7h16M4 12h16M4 17h16"
+            />
+          </svg>
+        </button>
+      )}
 
-      {/* Sidebar */}
+      {/* 📌 오른쪽에서 부드럽게 열리는 사이드바 */}
       <aside
         className={`
-          fixed 
-          top-16 left-0 
-          h-[calc(100vh-4rem)] 
-          bg-white 
-          border-r border-gray-200 
-          w-64 
-          p-5 
-          overflow-y-auto
-          z-40 
-          transition-transform duration-300
-          ${open ? "translate-x-0" : "-translate-x-full"}
+          fixed top-16 right-0 h-[calc(100%-64px)] w-64 
+          bg-white border-l border-[#EEEEEE]
+          shadow-xl text-[#393E46]
+          transform transition-transform duration-300 ease-in-out
+          ${open ? "translate-x-0" : "translate-x-full"}
+          z-50
         `}
       >
-        <h2 className="text-lg font-semibold text-gray-800 mb-6">MENU</h2>
+        {/* 🔘 상단 닫기 버튼 */}
+        <button
+          onClick={toggleSidebar}
+          className="
+            absolute top-4 right-4 
+            bg-white border border-[#EEEEEE] 
+            p-2 rounded-md shadow-sm
+            hover:bg-[#F7F7F7] hover:border-[#929AAB]
+            transition
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#393E46"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
 
-        <nav className="space-y-2 text-gray-700">
-          {/* Dashboard */}
-          <div>
-            <button
-              onClick={() => toggleMenu("dashboard")}
-              className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-gray-50"
-            >
-              <span>Dashboard</span>
-              <span>{submenu.dashboard ? "▲" : "▼"}</span>
-            </button>
-
-            {submenu.dashboard && (
-              <div className="ml-6 text-sm space-y-1 mt-1">
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  통계 요약
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  매출 분석
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  사용 로그
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Member */}
-          <div>
-            <button
-              onClick={() => toggleMenu("member")}
-              className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-gray-50"
-            >
-              <span>회원관리</span>
-              <span>{submenu.member ? "▲" : "▼"}</span>
-            </button>
-
-            {submenu.member && (
-              <div className="ml-6 text-sm space-y-1 mt-1">
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  회원 목록
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  회원 등급관리
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  탈퇴회원 관리
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Product */}
-          <div>
-            <button
-              onClick={() => toggleMenu("product")}
-              className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-gray-50"
-            >
-              <span>상품관리</span>
-              <span>{submenu.product ? "▲" : "▼"}</span>
-            </button>
-
-            {submenu.product && (
-              <div className="ml-6 text-sm space-y-1 mt-1">
-                <Link
-                  to="/item_list"
-                  className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50 text-gray-700 no-underline"
-                >
-                  상품 목록
-                </Link>
-                <Link
-                  to="/item_regist"
-                  className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50 text-gray-700 no-underline"
-                >
-                  상품 등록
-                </Link>
-                <Link
-                  to="/category_setting"
-                  className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50 text-gray-700 no-underline"
-                >
-                  카테고리 설정
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Order */}
-          <div>
-            <button
-              onClick={() => toggleMenu("order")}
-              className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-gray-50"
-            >
-              <span>주문관리</span>
-              <span>{submenu.order ? "▲" : "▼"}</span>
-            </button>
-
-            {submenu.order && (
-              <div className="ml-6 text-sm space-y-1 mt-1">
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  주문 목록
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  정산 대기
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  취소/환불
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Setting */}
-          <div>
-            <button
-              onClick={() => toggleMenu("setting")}
-              className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-gray-50"
-            >
-              <span>시스템 설정</span>
-              <span>{submenu.setting ? "▲" : "▼"}</span>
-            </button>
-
-            {submenu.setting && (
-              <div className="ml-6 text-sm space-y-1 mt-1">
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  환경 설정
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  관리자 계정
-                </button>
-                <button className="block text-left px-2 py-1 rounded-lg hover:bg-gray-50">
-                  로그 정책
-                </button>
-              </div>
-            )}
-          </div>
+        {/* 메뉴 리스트 */}
+        <nav className="px-6 py-16">
+          <ul className="space-y-2">
+            {menus.map((item) => (
+              <li
+                key={item.name}
+                onClick={() => handleMenuClick(item.path)}
+                className="
+                  cursor-pointer rounded-md px-4 py-2
+                  hover:bg-[#F7F7F7] transition
+                "
+              >
+                {item.name}
+              </li>
+            ))}
+          </ul>
         </nav>
       </aside>
     </>

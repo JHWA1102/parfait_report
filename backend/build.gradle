@@ -8,18 +8,20 @@ group = 'com.joy'
 version = '0.0.1-SNAPSHOT'
 description = 'Demo project for Spring Boot'
 
+/*
 java {
     sourceCompatibility = '17'
     targetCompatibility = '17'
 }
+*/
 
-/*
+
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
-*/
+
 
 configurations {
 	compileOnly {
@@ -46,16 +48,19 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+/*
 springBoot {
     mainClass = 'com.joy.parfaitReport.ParfaitReportApplication'
+}
+*/
+
+
+tasks.named('test') {
+	useJUnitPlatform()
 }
 
 /*
 tasks.named('test') {
-	useJUnitPlatform()
-}
-*/
-
-tasks.named('test') {
     enabled = false
 }
+*/
