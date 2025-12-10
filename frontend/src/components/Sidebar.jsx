@@ -8,9 +8,68 @@ export default function SidebarRight() {
   const toggleSidebar = () => setOpen(!open);
 
   const menus = [
-    { name: "재무상태표", path: "/balanceSheet" },
-    { name: "적금계산기" },
-    { name: "고정비관리" },
+    {
+      name: "재무상태표",
+      path: "/balanceSheet",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5"
+          fill="none"
+          stroke="#393E46"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 3h18v18H3zM8 3v18M3 8h18"
+          />
+        </svg>
+      ),
+    },
+
+    {
+      name: "적금계산기",
+      path: "/savingCalc",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5"
+          fill="none"
+          stroke="#393E46"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 1v22M5 6h14M5 12h14M5 18h14"
+          />
+        </svg>
+      ),
+    },
+
+    {
+      name: "고정비관리",
+      path: "/fixedCost",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5"
+          fill="none"
+          stroke="#393E46"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 3h18v4H3zM3 10h18v11H3z"
+          />
+        </svg>
+      ),
+    },
   ];
 
   // 메뉴 클릭 핸들러
@@ -21,87 +80,32 @@ export default function SidebarRight() {
 
   return (
     <>
-      {/* 🔘 오른쪽 토글 버튼 (헤더 아래에 배치) — 가시성 강화 버전 */}
-      {!open && (
-        <button
-          onClick={toggleSidebar}
-          className="
-            fixed top-20 right-4 z-40
-            bg-white border border-[#EEEEEE]
-            p-2 rounded-md shadow-sm
-            hover:bg-[#F7F7F7] hover:border-[#929AAB]
-            transition flex items-center justify-center
-          "
+      <aside className="w-64 h-screen bg-[#f9f9f9] border-r border-[#EEEEEE] p-6 flex flex-col">
+        <div
+          className="text-xl font-bold mb-10 tracking-tight text-[#393E46] cursor-pointer select-none"
+          onClick={() => navigate("/")}
         >
-          {/* 명확한 햄버거 아이콘 */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#393E46"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 7h16M4 12h16M4 17h16"
-            />
-          </svg>
-        </button>
-      )}
-
-      {/* 📌 오른쪽에서 부드럽게 열리는 사이드바 */}
-      <aside
-        className={`
-          fixed top-16 right-0 h-[calc(100%-64px)] w-64 
-          bg-white border-l border-[#EEEEEE]
-          shadow-xl text-[#393E46]
-          transform transition-transform duration-300 ease-in-out
-          ${open ? "translate-x-0" : "translate-x-full"}
-          z-50
-        `}
-      >
-        {/* 🔘 상단 닫기 버튼 */}
-        <button
-          onClick={toggleSidebar}
-          className="
-            absolute top-4 right-4 
-            bg-white border border-[#EEEEEE] 
-            p-2 rounded-md shadow-sm
-            hover:bg-[#F7F7F7] hover:border-[#929AAB]
-            transition
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#393E46"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+          PARFAIT REPORT
+        </div>
 
         {/* 메뉴 리스트 */}
-        <nav className="px-6 py-16">
-          <ul className="space-y-2">
+        <nav className="flex-1">
+          <ul className="space-y-4">
             {menus.map((item) => (
               <li
                 key={item.name}
-                onClick={() => handleMenuClick(item.path)}
+                onClick={() => item.path && navigate(item.path)}
                 className="
-                  cursor-pointer rounded-md px-4 py-2
-                  hover:bg-[#F7F7F7] transition
+                  cursor-pointer text-[#393E46] 
+                  hover:bg-[#F7F7F7] 
+                  p-2 rounded-md flex items-center gap-3
                 "
               >
-                {item.name}
+                {/* 아이콘 영역 */}
+                <span>{item.icon}</span>
+
+                {/* 메뉴 이름 */}
+                <span>{item.name}</span>
               </li>
             ))}
           </ul>

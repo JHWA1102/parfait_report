@@ -1,17 +1,17 @@
 import Header from "./components/Header";
-import SidebarRight from "./components/Sidebar";
+import Sidebar from "./components/Sidebar";
 import { Outlet } from "react-router-dom";
 
 export default function AppLayout() {
   return (
-    <div className="w-full h-full">
-      <Header />
-      <SidebarRight />
+    <div className="flex">
+      {/* <Header /> */}
+      <Sidebar />
 
       {/* 메인 컨텐츠 영역 (헤더 아래로) */}
-      <main className="pt-16 px-6">
+      <div className="flex-1 p-8 min-h-screen bg-white">
         <Outlet />
-      </main>
+      </div>
     </div>
   );
 }
