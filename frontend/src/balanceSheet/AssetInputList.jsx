@@ -1,97 +1,135 @@
 // src/components/AssetInputList.jsx
-import React, { useState } from "react";
+import React from "react";
+import BankSelect from "./BankSelect";
 
-export default function AssetInputList() {
-  const categories = [
-    "적금",
-    "CMA",
-    "노란우산",
-    "펀드",
-    "주식",
-    "금 KRX",
-    "아파트",
-    "오피스텔",
-    "빌라",
-    "거주용부동산",
-    "주택청약통장",
-    "연금저축",
-    "개인연금",
-    "대출금",
-    "보증금",
-    "보증금(전세)",
-    "아파트대출",
+export default function AssetInputList({
+  values = [],
+  onChange,
+  bankList = [],
+  securitiesList = [],
+}) {
+  const baseInputClass =
+    "h-11 w-full border border-gray-300 rounded-lg text-sm " +
+    "focus:border-indigo-600 focus:ring-indigo-600 outline-none";
+
+  const CATEGORY_OPTIONS = [
+    { value: "예금", detailType: "BANK" },
+    { value: "적금", detailType: "BANK" },
+    { value: "CMA", detailType: "BANK" },
+    { value: "주식", detailType: "SECURITIES" },
+    { value: "펀드", detailType: "SECURITIES" },
+    { value: "부동산", detailType: "TEXT" },
+    { value: "연금", detailType: "TEXT" },
+    { value: "대출", detailType: "TEXT" },
   ];
 
-  const [items, setItems] = useState([]);
-
-  const addItem = () => {
-    setItems([...items, { id: Date.now(), category: "", amount: "" }]);
+  const addRow = () => {
+    onChange([...values, { category: "예금", detail: "", amount: "" }]);
   };
 
-  const updateItem = (id, key, value) => {
-    setItems(
-      items.map((item) => (item.id === id ? { ...item, [key]: value } : item))
-    );
+  const updateRow = (idx, key, value) => {
+    const copy = [...values];
+    copy[idx][key] = value;
+    onChange(copy);
   };
 
-  const removeItem = (id) => {
-    setItems(items.filter((item) => item.id !== id));
+  const removeRow = (idx) => {
+    onChange(values.filter((_, i) => i !== idx));
+  };
+
+  const getDetailType = (category) =>
+    CATEGORY_OPTIONS.find((c) => c.value === category)?.detailType;
+
+  const formatCurrency = (value) => {
+    if (!value) return "";
+    return Number(value).toLocaleString("ko-KR");
+  };
+
+  const parseCurrency = (value) => {
+    return value.replace(/[^\d]/g, "");
   };
 
   return (
-    <div className="border border-[#393E46] rounded-lg p-4 mt-8">
-      {/* 제목 */}
-      <div className="text-lg font-bold mb-3 text-center">금융자산 입력</div>
+    <div className="space-y-3">
+      {values.map((row, idx) => {
+        const detailType = getDetailType(row.category);
 
-      {/* 리스트 */}
-      <div className="space-y-3">
-        {items.map((item) => (
+        return (
           <div
-            key={item.id}
-            className="flex items-center gap-3 bg-white border border-gray-300 rounded-md p-3"
+            key={idx}
+            className="flex gap-2 items-center bg-white border border-gray-300 rounded-md p-3"
           >
-            {/* 카테고리 선택 */}
+            {/* 항목 */}
             <select
-              value={item.category}
-              onChange={(e) => updateItem(item.id, "category", e.target.value)}
-              className="border px-3 py-2 rounded-md"
+              value={row.category}
+              onChange={(e) => updateRow(idx, "category", e.target.value)}
+              className="py-2.5 px-3 block border border-gray-300 rounded-lg text-sm focus:border-indigo-600 focus:ring-indigo-600 outline-none"
             >
-              <option value="">항목 선택</option>
-              {categories.map((c) => (
-                <option key={c} value={c}>
-                  {c}
+              {CATEGORY_OPTIONS.map((c) => (
+                <option key={c.value} value={c.value}>
+                  {c.value}
                 </option>
               ))}
             </select>
+            <div className={detailType === "TEXT" ? "w-[40%]" : "flex-1"}>
+              {/* 상세내역 */}
+              {detailType === "BANK" || detailType === "SECURITIES" ? (
+                <BankSelect
+                  value={row.detail}
+                  bankList={detailType === "BANK" ? bankList : securitiesList}
+                  onChange={(val) => updateRow(idx, "detail", val)}
+                  className={baseInputClass}
+                />
+              ) : (
+                <input
+                  value={row.detail}
+                  onChange={(e) => updateRow(idx, "detail", e.target.value)}
+                  placeholder="상세내역"
+                  className={`${baseInputClass} px-4`}
+                />
+              )}
+            </div>
 
             {/* 금액 */}
-            <input
-              type="number"
-              placeholder="금액"
-              value={item.amount}
-              onChange={(e) => updateItem(item.id, "amount", e.target.value)}
-              className="flex-1 w-32 border px-3 py-2 rounded-md text-right"
-            />
+            <div className="relative w-71">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">
+                ₩
+              </span>
 
-            {/* 삭제 */}
+              <input
+                type="text"
+                value={formatCurrency(row.amount)}
+                onChange={(e) =>
+                  updateRow(idx, "amount", parseCurrency(e.target.value))
+                }
+                className="
+                  h-11 w-full pl-8 pr-3
+                  border border-gray-300 rounded-lg text-sm
+                  text-right
+                  focus:border-indigo-600 focus:ring-indigo-600
+                  outline-none
+                "
+                placeholder="0"
+              />
+            </div>
+
+            {/* 삭제 버튼 ❗ type 지정 */}
             <button
-              onClick={() => removeItem(item.id)}
-              className="text-red-500 hover:text-red-700"
+              type="button"
+              onClick={() => removeRow(idx)}
+              className="text-red-500"
             >
-              X
+              ✕
             </button>
           </div>
-        ))}
-      </div>
+        );
+      })}
 
-      {/* 추가 버튼 */}
+      {/* 추가 버튼 ❗ type 지정 */}
       <button
-        onClick={addItem}
-        className="
-          w-full mt-4 py-2 border border-[#393E46] rounded-md
-          text-[#393E46] font-medium text-center
-          hover:bg-white transition
-        "
+        type="button"
+        onClick={addRow}
+        className="w-full border rounded-md py-2 hover:bg-gray-50"
       >
         + 항목 추가
       </button>

@@ -68,8 +68,8 @@ export default function BankInputList({ onChangeRows, onChangeBankList }) {
           {/* 은행 */}
           <BankSelect
             value={row.bank}
-            onChange={(val) => updateRow(index, "bank", val)}
             bankList={bankList}
+            onChange={(val) => updateRow(index, "bank", val)}
           />
 
           {/* 금액 */}

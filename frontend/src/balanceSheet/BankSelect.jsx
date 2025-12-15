@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronUpDownIcon, CheckIcon } from "@heroicons/react/20/solid";
 
-export default function BankSelect({ value, onChange, bankList }) {
+export default function BankSelect({
+  value,
+  onChange,
+  bankList,
+  className = "",
+}) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const inputRef = useRef(null);
@@ -27,7 +32,7 @@ export default function BankSelect({ value, onChange, bankList }) {
   }, []);
 
   return (
-    <div className="relative w-52" ref={inputRef}>
+    <div className="relative w-50" ref={inputRef}>
       {/* 검색 인풋 */}
       <div className="relative">
         <input

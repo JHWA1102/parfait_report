@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-html {
-  font-family: "Pretendard", "Inter", sans-serif;
+@layer base {
+  html, body {
+    font-family: "Pretendard", "Inter", sans-serif;
+  }
 }
 
-
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
