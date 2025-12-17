@@ -14,10 +14,10 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/api/common")
 public class CommonCotroller {
 	private final CommonService commonService;
 	
-	@RequestMapping("/common")
 	@GetMapping("/code")
     public List<Map<String, Object>> getCodeList(
             @RequestParam("mst_code") String mst_code) {
