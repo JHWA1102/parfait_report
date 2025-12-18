@@ -12,7 +12,7 @@
 			 GROUP_CODE_SUB GCS 
 		  ON GCM.MST_CD = GCS.MST_CD 
    		WHERE 1 = 1 
-   		  AND GCM.MST_CD = #{mst_code}
+   		  AND GCM.MST_CD = #{_parameter}
    		ORDER BY GCS.SORT_ORDER
     </select>
 </mapper>
