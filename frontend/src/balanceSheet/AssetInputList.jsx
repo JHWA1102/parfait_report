@@ -57,13 +57,13 @@ export default function AssetInputList({
         return (
           <div
             key={idx}
-            className="flex gap-2 items-center bg-white border border-gray-300 rounded-md p-3"
+            className="flex flex-col md:flex-row md:items-center gap-2 bg-white border border-gray-300 rounded-md p-3"
           >
             {/* 항목 */}
             <select
               value={row.category}
               onChange={(e) => updateRow(idx, "category", e.target.value)}
-              className="py-2.5 px-3 block border border-gray-300 rounded-lg text-sm focus:border-indigo-600 focus:ring-indigo-600 outline-none"
+              className="py-3 px-4 block border border-gray-300 rounded-lg text-sm focus:border-indigo-600 focus:ring-indigo-600 outline-none"
             >
               {CATEGORY_OPTIONS.map((c) => (
                 <option key={c.value} value={c.value}>
@@ -71,14 +71,18 @@ export default function AssetInputList({
                 </option>
               ))}
             </select>
-            <div className={detailType === "TEXT" ? "w-[40%]" : "flex-1"}>
+            <div
+              className={
+                detailType === "TEXT" ? "w-full md:w-[80%]" : "w-full md:flex-1"
+              }
+            >
               {/* 상세내역 */}
               {detailType === "BANK" || detailType === "SECURITIES" ? (
                 <BankSelect
                   value={row.detail}
                   bankList={detailType === "BANK" ? bankList : securitiesList}
                   onChange={(val) => updateRow(idx, "detail", val)}
-                  className={baseInputClass}
+                  className={`${baseInputClass}`}
                 />
               ) : (
                 <input
@@ -91,7 +95,7 @@ export default function AssetInputList({
             </div>
 
             {/* 금액 */}
-            <div className="relative w-71">
+            <div className="relative w-full">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">
                 ₩
               </span>
@@ -117,7 +121,7 @@ export default function AssetInputList({
             <button
               type="button"
               onClick={() => removeRow(idx)}
-              className="text-red-500"
+              className="text-red-500 self-end md:self-auto"
             >
               ✕
             </button>

@@ -37,7 +37,7 @@ export default function BankSelect({
       <div className="relative">
         <input
           type="text"
-          className="py-2.5 px-10 block w-full border border-gray-300 rounded-lg text-sm focus:border-indigo-600 focus:ring-indigo-600 outline-none"
+          className="h-11 px-10 block w-full border border-gray-300 rounded-lg text-sm focus:border-indigo-600 focus:ring-indigo-600 outline-none"
           placeholder="은행 검색"
           value={query || (selectedBank?.SUB_NM ?? "")}
           onChange={(e) => {

@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function SidebarRight() {
-  const [open, setOpen] = useState(false);
+export default function SidebarRight({ isOpen, onClose }) {
   const navigate = useNavigate();
-
-  const toggleSidebar = () => setOpen(!open);
 
   const menus = [
     {
@@ -75,17 +72,62 @@ export default function SidebarRight() {
   // 메뉴 클릭 핸들러
   const handleMenuClick = (path) => {
     navigate(path);
-    setOpen(false); // 클릭 후 사이드바 닫기
+    onClose?.(); // 모바일일 때만 닫힘
   };
 
   return (
     <>
-      <aside className="w-64 h-screen bg-[#f9f9f9] border-r border-[#EEEEEE] p-6 flex flex-col">
+      {isOpen && (
         <div
-          className="text-xl font-bold mb-10 tracking-tight text-[#393E46] cursor-pointer select-none"
-          onClick={() => navigate("/")}
-        >
-          PARFAIT REPORT
+          className="fixed inset-0 bg-black/30 z-40 md:hidden"
+          onClick={onClose}
+        />
+      )}
+      <aside
+        className={`
+          bg-[#f9f9f9] border-r border-[#EEEEEE] p-6 flex flex-col
+          
+          /* 데스크탑 */
+          md:w-62 md:h-screen md:static md:translate-x-0
+
+          /* 모바일 - 전체 덮기 */
+          fixed inset-0 z-50
+          w-full h-screen
+          transition-transform duration-300
+          ${isOpen ? "translate-x-0" : "translate-x-full"}
+          md:transform-none
+        `}
+      >
+        {/* 🔹 상단 헤더 영역 */}
+        <div className="flex items-center justify-between mb-10">
+          <div
+            className="text-xl font-bold tracking-tight text-[#393E46] cursor-pointer select-none"
+            onClick={() => navigate("/")}
+          >
+            PARFAIT REPORT
+          </div>
+
+          {/* ❌ 닫기 버튼 (모바일 전용) */}
+          <button
+            onClick={onClose}
+            className="md:hidden"
+            aria-label="Close menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 text-[#393E46]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
 
         {/* 메뉴 리스트 */}

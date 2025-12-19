@@ -272,28 +272,34 @@ export default function BanlanceSheetMain() {
       const row = sheet2Data[r];
       if (!row) continue;
 
-      const isDetailRow = (() => {
-        const rawLabel = row[0] || row[2] || "";
-        const label = typeof rawLabel === "string" ? rawLabel : "";
-        return (
-          label &&
-          !label.includes("자산") &&
-          !label.includes("부채") &&
-          !label.includes("소계") &&
-          !label.includes("합계") &&
-          !label.includes("자본")
-        );
-      })();
+      // 라벨 판단
+      const rawLabel = row[0] || row[2] || "";
+      const label = typeof rawLabel === "string" ? rawLabel : "";
+
+      const isDetailRow =
+        label &&
+        !label.includes("자산") &&
+        !label.includes("부채") &&
+        !label.includes("소계") &&
+        !label.includes("합계") &&
+        !label.includes("자본");
+
+      const isTotalLabelRow =
+        label.includes("자산 합계") ||
+        label.includes("부채 합계") ||
+        label.includes("자본(순자산)");
 
       for (let c = range.s.c; c <= range.e.c; c++) {
         const cellRef = XLSX.utils.encode_cell({ r, c });
-        if (!ws2[cellRef]) continue;
+        const cell = ws2[cellRef];
+        if (!cell) continue;
 
         const fillColor = getBsFillColor(row, c);
 
-        ws2[cellRef].s = {
+        // 공통 스타일
+        cell.s = {
           alignment: {
-            horizontal: "center",
+            horizontal: cell.t === "n" ? "right" : "center",
             vertical: "center",
           },
           font: {
@@ -308,8 +314,19 @@ export default function BanlanceSheetMain() {
           },
         };
 
-        if ((c === 1 || c === 3) && typeof ws2[cellRef].v === "number") {
-          ws2[cellRef].z = "#,##0";
+        // 👉 현재 행의 숫자 컬럼 콤마
+        if (cell.t === "n") {
+          cell.z = "#,##0";
+        }
+
+        // 👉 합계/자본 라벨이면 다음 행 숫자에 콤마
+        if (isTotalLabelRow) {
+          const nextCellRef = XLSX.utils.encode_cell({ r: r + 1, c });
+          const nextCell = ws2[nextCellRef];
+
+          if (nextCell && nextCell.t === "n") {
+            nextCell.z = "#,##0";
+          }
         }
       }
     }

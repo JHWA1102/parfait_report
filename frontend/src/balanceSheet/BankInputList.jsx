@@ -63,7 +63,7 @@ export default function BankInputList({ onChangeRows, onChangeBankList }) {
       {rows.map((row, index) => (
         <div
           key={index}
-          className="flex items-center gap-2 rounded-md bg-white"
+          className="flex flex-col md:flex-row md:items-center gap-2 rounded-md bg-white"
         >
           {/* 은행 */}
           <BankSelect
@@ -73,7 +73,7 @@ export default function BankInputList({ onChangeRows, onChangeBankList }) {
           />
 
           {/* 금액 */}
-          <div className="flex items-center w-100 border border-gray-300 rounded-md outline-none">
+          <div className="flex items-center w-full md:w-40 border border-gray-300 rounded-md outline-none">
             <span className="text-gray-600 mr-1 ml-3">₩</span>
             <input
               type="text"
@@ -91,7 +91,7 @@ export default function BankInputList({ onChangeRows, onChangeBankList }) {
           {rows.length > 1 && (
             <button
               onClick={() => removeRow(index)}
-              className="bg-red-100 text-red-600 p-1 rounded-md hover:bg-red-200 ml-auto"
+              className="bg-red-100 text-red-600 p-1 rounded-md hover:bg-red-200 md:ml-auto"
             >
               <XMarkIcon className="h-4 w-4" />
             </button>
