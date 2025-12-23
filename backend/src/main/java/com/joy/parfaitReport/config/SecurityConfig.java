@@ -19,6 +19,12 @@ public class SecurityConfig {
             .cors(cors -> {})
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
+            	.requestMatchers(
+            			"/",
+                        "/index.html",
+                        "/parfaitReport.png",
+                        "/assets/**"
+            			).permitAll()
                 .requestMatchers("/api/**").permitAll()
                 .anyRequest().permitAll()
             );
