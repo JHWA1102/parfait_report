@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BankInputList from "./BankInputList";
 import { ChevronDownIcon, ArrowDownTrayIcon } from "@heroicons/react/16/solid";
-import { getCodeList } from "../api/commonApi";
+import { getCodeList } from "../../api/commonApi";
 import * as XLSX from "xlsx-js-style";
 import AssetInputList from "./AssetInputList";
 

@@ -7,7 +7,7 @@ export default function SidebarRight({ isOpen, onClose }) {
   const menus = [
     {
       name: "재무상태표",
-      path: "/balanceSheet",
+      path: "/balance-sheet",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,30 +26,30 @@ export default function SidebarRight({ isOpen, onClose }) {
       ),
     },
 
-    {
-      name: "적금계산기",
-      path: "/savingCalc",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-5"
-          fill="none"
-          stroke="#393E46"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 1v22M5 6h14M5 12h14M5 18h14"
-          />
-        </svg>
-      ),
-    },
+    // {
+    //   name: "적금계산기",
+    //   path: "/savingCalc",
+    //   icon: (
+    //     <svg
+    //       xmlns="http://www.w3.org/2000/svg"
+    //       className="w-5 h-5"
+    //       fill="none"
+    //       stroke="#393E46"
+    //       strokeWidth="2"
+    //       viewBox="0 0 24 24"
+    //     >
+    //       <path
+    //         strokeLinecap="round"
+    //         strokeLinejoin="round"
+    //         d="M12 1v22M5 6h14M5 12h14M5 18h14"
+    //       />
+    //     </svg>
+    //   ),
+    // },
 
     {
-      name: "고정비관리",
-      path: "/fixedCost",
+      name: "월간자금관리",
+      path: "/monthly-finance",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"

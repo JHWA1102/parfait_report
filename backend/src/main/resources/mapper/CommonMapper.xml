@@ -13,6 +13,7 @@
 		  ON GCM.MST_CD = GCS.MST_CD 
    		WHERE 1 = 1 
    		  AND GCM.MST_CD = #{_parameter}
+   		  AND GCS.USE_YN = 'Y'
    		ORDER BY GCS.SORT_ORDER
     </select>
 </mapper>

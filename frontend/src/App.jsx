@@ -3,7 +3,8 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "./AppLayout";
-import BalanceSheetMain from "./balanceSheet/BalanceSheetMain";
+import BalanceSheetMain from "./pages/balanceSheet/BalanceSheetMain";
+import MonthlyFinanceMain from "./pages/monthlyFinance/MonthlyFinanceMain";
 import MainPage from "./pages/MainPage";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<MainPage />} />
-          <Route path="balanceSheet" element={<BalanceSheetMain />} />
+          <Route path="balance-sheet" element={<BalanceSheetMain />} />
+          <Route path="monthly-finance" element={<MonthlyFinanceMain />} />
         </Route>
       </Routes>
     </>

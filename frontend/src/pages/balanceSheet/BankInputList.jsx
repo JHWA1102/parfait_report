@@ -4,7 +4,7 @@ import {
   PlusIcon,
   XMarkIcon,
 } from "@heroicons/react/20/solid";
-import { getCodeList } from "../api/commonApi";
+import { getCodeList } from "../../api/commonApi";
 
 import BankSelect from "./BankSelect";
 
