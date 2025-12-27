@@ -90,8 +90,8 @@ export default function BankSelect({
                 <div className="flex items-center gap-3">
                   <div className="flex items-center justify-center bg-gray-200 rounded-full w-6 h-6 overflow-hidden">
                     <img
-                      src={`/public/bankLogo/${bank.SUB_CD}.svg`}
-                      onError={(e) => (e.target.style.display = "none")}
+                      src={`/bankLogo/${bank.SUB_CD}.svg`}
+                      onError={(e) => (e.currentTarget.style.display = "none")}
                       alt=""
                       className="w-5 h-5"
                     />
