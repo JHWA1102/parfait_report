@@ -1,7 +1,7 @@
 export default function MainPage() {
   return (
     <div className="pt-10 md:pt-0">
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 text-center bg-[#F7F7F7]">
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-8.8rem)] px-6 text-center bg-[#F7F7F7]">
         <span className="text-sm tracking-wide text-[#929AAB] mb-4">
           PRIVATE FINANCIAL REPORT
         </span>

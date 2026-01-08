@@ -1,8 +1,16 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function SidebarRight({ isOpen, onClose }) {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  /* =========================
+     라우트 변경 시 사이드바 닫기 (모바일 대응)
+  ========================= */
+  useEffect(() => {
+    onClose && onClose();
+  }, [location.pathname]);
 
   const menus = [
     {
@@ -11,7 +19,7 @@ export default function SidebarRight({ isOpen, onClose }) {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-5"
+          className="h-5 w-5"
           fill="none"
           stroke="#393E46"
           strokeWidth="2"
@@ -25,35 +33,13 @@ export default function SidebarRight({ isOpen, onClose }) {
         </svg>
       ),
     },
-
-    // {
-    //   name: "적금계산기",
-    //   path: "/savingCalc",
-    //   icon: (
-    //     <svg
-    //       xmlns="http://www.w3.org/2000/svg"
-    //       className="w-5 h-5"
-    //       fill="none"
-    //       stroke="#393E46"
-    //       strokeWidth="2"
-    //       viewBox="0 0 24 24"
-    //     >
-    //       <path
-    //         strokeLinecap="round"
-    //         strokeLinejoin="round"
-    //         d="M12 1v22M5 6h14M5 12h14M5 18h14"
-    //       />
-    //     </svg>
-    //   ),
-    // },
-
     {
       name: "월간자금관리",
       path: "/monthly-finance",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-5"
+          className="h-5 w-5"
           fill="none"
           stroke="#393E46"
           strokeWidth="2"
@@ -69,45 +55,50 @@ export default function SidebarRight({ isOpen, onClose }) {
     },
   ];
 
-  // 메뉴 클릭 핸들러
   const handleMenuClick = (path) => {
     navigate(path);
-    onClose?.(); // 모바일일 때만 닫힘
+    onClose && onClose();
   };
 
   return (
     <>
+      {/* 모바일 오버레이 */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/30 z-40 md:hidden"
+          className="fixed inset-0 z-40 bg-black/30 md:hidden"
           onClick={onClose}
         />
       )}
+
       <aside
         className={`
-          bg-[#f9f9f9] border-r border-[#EEEEEE] p-6 flex flex-col
-          
-          /* 데스크탑 */
-          md:w-62 md:h-screen md:static md:translate-x-0
+          bg-[#f9f9f9] border-r border-[#EEEEEE]
+          flex flex-col p-6
 
-          /* 모바일 - 전체 덮기 */
+          /* 배경 끊김 방지 */
+          min-h-screen overflow-y-auto
+
+          /* 데스크탑 */
+          md:w-62 md:static md:translate-x-0
+
+          /* 모바일 */
           fixed inset-0 z-50
-          w-full h-screen
-          transition-transform duration-300
+          w-full
+          transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"}
           md:transform-none
         `}
       >
-        {/* 🔹 상단 헤더 영역 */}
-        <div className="flex items-center justify-between mb-10">
+        {/* 상단 로고 */}
+        <div className="mb-10 flex items-center justify-between">
           <div
-            className="text-xl font-bold tracking-tight text-[#393E46] cursor-pointer select-none"
-            onClick={() => navigate("/")}
+            className="cursor-pointer select-none text-xl font-bold tracking-tight text-[#393E46]"
+            onClick={() => handleMenuClick("/")}
           >
             PARFAIT REPORT
           </div>
 
-          {/* ❌ 닫기 버튼 (모바일 전용) */}
+          {/* 모바일 닫기 버튼 */}
           <button
             onClick={onClose}
             className="md:hidden"
@@ -115,7 +106,7 @@ export default function SidebarRight({ isOpen, onClose }) {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-[#393E46]"
+              className="h-6 w-6 text-[#393E46]"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -136,17 +127,15 @@ export default function SidebarRight({ isOpen, onClose }) {
             {menus.map((item) => (
               <li
                 key={item.name}
-                onClick={() => item.path && navigate(item.path)}
+                onClick={() => handleMenuClick(item.path)}
                 className="
-                  cursor-pointer text-[#393E46] 
-                  hover:bg-[#F7F7F7] 
-                  p-2 rounded-md flex items-center gap-3
+                  flex cursor-pointer items-center gap-3 rounded-md p-2
+                  text-[#393E46]
+                  hover:bg-[#F7F7F7]
+                  transition-colors
                 "
               >
-                {/* 아이콘 영역 */}
                 <span>{item.icon}</span>
-
-                {/* 메뉴 이름 */}
                 <span>{item.name}</span>
               </li>
             ))}
