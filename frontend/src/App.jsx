@@ -6,6 +6,7 @@ import AppLayout from "./AppLayout";
 import BalanceSheetMain from "./pages/balanceSheet/BalanceSheetMain";
 import MonthlyFinanceMain from "./pages/monthlyFinance/MonthlyFinanceMain";
 import MainPage from "./pages/MainPage";
+import FeedPage from "./pages/feed/FeedPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<MainPage />} />
           <Route path="balance-sheet" element={<BalanceSheetMain />} />
           <Route path="monthly-finance" element={<MonthlyFinanceMain />} />
+          <Route path="feed" element={<FeedPage />} />
         </Route>
       </Routes>
     </>
