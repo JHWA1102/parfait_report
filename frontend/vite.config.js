@@ -14,7 +14,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "../backend/src/main/resources/static",
+    outDir: "dist",
     emptyOutDir: true, // 이전 static 파일 자동 삭제
     assetsDir: "assets", // 기본값. asset 경로 안정적 유지
   },
