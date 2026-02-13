@@ -1,4 +1,4 @@
-name: Deploy Spring Boot
+name: Parfait Full Deploy
 
 on:
   push:
@@ -11,48 +11,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 코드 가져오기
       - name: Checkout
         uses: actions/checkout@v4
 
+      # JDK 세팅
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Grant execute permission
-        run: chmod +x ./backend/gradlew
+      # Node 세팅 (프론트용)
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Build with Gradle
+      # 백엔드 빌드
+      - name: Build Backend
         run: |
           cd backend
+          chmod +x gradlew
           ./gradlew clean build -x test
 
-      - name: Copy jar to server
+      # 프론트 빌드
+      - name: Build Frontend
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+
+      # 백엔드 jar 서버 전송
+      - name: Copy Backend Jar to Server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "backend/build/libs/*.jar"
-          target: "/home/opc/parfait_report/backend"
+          target: "/var/www/parfait_report/backend"
 
-      - name: Restart Server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            sudo systemctl restart parfait
-
-      - name: Build Frontend
-        run: |
-          cd frontend
-          npm install
-          npm run build
-
-      - name: Copy frontend build to server
+      # 프론트 dist 서버 전송
+      - name: Copy Frontend Build to Server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -60,3 +61,13 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "frontend/dist/*"
           target: "/var/www/parfait_report/frontend/dist"
+
+      # 마지막에 서버 재시작
+      - name: Restart Backend Service
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            sudo systemctl restart parfait
