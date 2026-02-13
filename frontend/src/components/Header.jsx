@@ -23,7 +23,7 @@ export default function Header({ onMenuClick }) {
             onClick={() => navigate("/")}
           >
             <span className="text-[17px] font-semibold tracking-tight text-slate-900">
-              PARFAIT ACTION
+              PARFAIT ACTION FINISH
             </span>
             <span className="text-[17px] font-medium tracking-tight text-slate-400">
               REPORT
