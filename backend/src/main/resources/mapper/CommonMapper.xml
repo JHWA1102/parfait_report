@@ -6,7 +6,18 @@
 <mapper namespace="CommonMapper">
     <select id="getCodeList" parameterType="string" resultType="map">
 		SELECT 
-			 *
+			         GCM.MST_CD,
+        GCM.MST_NM,
+        GCS.SEQ,
+        GCS.SUB_CD,
+        GCS.SUB_NM,
+        GCS.USE_YN,
+        GCS.SORT_ORDER,
+
+        -- 🔥 날짜 컬럼은 문자열로 변환
+        TO_CHAR(GCS.REG_DT, 'YYYY-MM-DD HH24:MI:SS') AS REG_DT,
+        TO_CHAR(GCS.MOD_DT, 'YYYY-MM-DD HH24:MI:SS') AS MOD_DT
+
 		FROM GROUP_CODE_MST GCM 
 		LEFT OUTER JOIN 
 			 GROUP_CODE_SUB GCS 

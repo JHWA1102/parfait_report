@@ -1,0 +1,696 @@
+nohup: ignoring input
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-02-05T17:08:22.213Z  INFO 104327 --- [parfait-report] [           main] c.j.p.ParfaitReportApplication           : Starting ParfaitReportApplication v0.0.1-SNAPSHOT using Java 17.0.18 with PID 104327 (/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar started by opc in /var/www/parfait_report/backend/build/libs)
+2026-02-05T17:08:22.228Z  INFO 104327 --- [parfait-report] [           main] c.j.p.ParfaitReportApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-02-05T17:08:23.208Z  INFO 104327 --- [parfait-report] [           main] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-05T17:08:32.107Z DEBUG 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : Ignored because not a concrete top-level class: URL [jar:nested:/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/joy/parfaitReport/ParfaitReportApplication.class]
+2026-02-05T17:08:32.107Z DEBUG 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : Ignored because not a concrete top-level class: URL [jar:nested:/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/joy/parfaitReport/common/controller/CommonCotroller.class]
+2026-02-05T17:08:32.107Z DEBUG 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : Ignored because not a concrete top-level class: URL [jar:nested:/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/joy/parfaitReport/common/dao/CommonDao.class]
+2026-02-05T17:08:32.108Z DEBUG 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : Ignored because not a concrete top-level class: URL [jar:nested:/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/joy/parfaitReport/common/service/CommonService.class]
+2026-02-05T17:08:32.108Z DEBUG 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : Ignored because not a concrete top-level class: URL [jar:nested:/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/joy/parfaitReport/config/MyBatisConfig.class]
+2026-02-05T17:08:32.108Z DEBUG 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : Ignored because not a concrete top-level class: URL [jar:nested:/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/joy/parfaitReport/config/SecurityConfig.class]
+2026-02-05T17:08:32.108Z DEBUG 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : Ignored because not a concrete top-level class: URL [jar:nested:/var/www/parfait_report/backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/joy/parfaitReport/member/MemberController.class]
+2026-02-05T17:08:32.109Z  WARN 104327 --- [parfait-report] [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.joy.parfaitReport]' package. Please check your configuration.
+2026-02-05T17:08:35.607Z  INFO 104327 --- [parfait-report] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-05T17:08:35.712Z  INFO 104327 --- [parfait-report] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-05T17:08:35.713Z  INFO 104327 --- [parfait-report] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-02-05T17:08:35.924Z  INFO 104327 --- [parfait-report] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-05T17:08:35.927Z  INFO 104327 --- [parfait-report] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12714 ms
+2026-02-05T17:08:40.135Z DEBUG 104327 --- [parfait-report] [           main] o.mybatis.spring.SqlSessionFactoryBean   : Parsed mapper file: 'class path resource [mapper/CommonMapper.xml]'
+2026-02-05T17:08:41.431Z  INFO 104327 --- [parfait-report] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-02-05T17:08:42.726Z DEBUG 104327 --- [parfait-report] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2026-02-05T17:08:43.813Z DEBUG 104327 --- [parfait-report] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-05T17:08:44.117Z  WARN 104327 --- [parfait-report] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e2d981c1-6856-410c-a72d-23b44b7f0a6f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-02-05T17:08:44.332Z  INFO 104327 --- [parfait-report] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-05T17:08:46.617Z DEBUG 104327 --- [parfait-report] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-05T17:08:47.127Z DEBUG 104327 --- [parfait-report] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-05T17:08:49.334Z  INFO 104327 --- [parfait-report] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-05T17:08:49.722Z  INFO 104327 --- [parfait-report] [           main] c.j.p.ParfaitReportApplication           : Started ParfaitReportApplication in 32.298 seconds (process running for 36.654)
+2026-02-05T17:09:22.711Z  INFO 104327 --- [parfait-report] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-05T17:09:22.712Z  INFO 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-05T17:09:22.715Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-02-05T17:09:22.717Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-02-05T17:09:22.717Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-02-05T17:09:22.721Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6086b022
+2026-02-05T17:09:22.723Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1d467544
+2026-02-05T17:09:22.725Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-05T17:09:22.726Z  INFO 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2026-02-05T17:09:23.507Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-05T17:09:23.524Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-05T17:09:23.634Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-05T17:09:23.836Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-05T17:09:23.837Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-05T17:09:23.919Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-05T17:09:23.921Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2026-02-05T17:09:24.222Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2026-02-05T17:09:24.312Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-05T17:19:18.228Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-05T17:19:19.037Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-05T17:19:20.005Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-05T17:19:20.330Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-05T17:19:20.483Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-05T17:19:21.021Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-05T17:19:21.023Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-05T17:19:25.813Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-05T17:19:26.317Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Feb 05 17:19:21 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-05T17:19:32.624Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-05T17:19:32.710Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-05T17:19:32.825Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-05T17:19:32.914Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-05T17:19:32.921Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-05T17:19:33.011Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-05T17:19:33.032Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-05T17:19:33.034Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-05T17:19:33.118Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-05T17:19:33.119Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Feb 05 17:19:33 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-05T17:19:33.122Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-05T17:32:00.223Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/route", parameters={multipart}
+2026-02-05T17:32:02.543Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request
+2026-02-05T17:32:02.826Z ERROR 104327 --- [parfait-report] [nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request] with root cause
+
+org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.MultipartStream.readHeaders(MultipartStream.java:863) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.findNextItem(FileItemIteratorImpl.java:244) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.hasNext(FileItemIteratorImpl.java:313) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:456) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2675) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.connector.Request.getParts(Request.java:2534) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:770) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at jakarta.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:315) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at jakarta.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:315) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at jakarta.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:315) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:95) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:88) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:112) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1228) ~[spring-webmvc-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.12.jar!/:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.12.jar!/:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.6.jar!/:6.5.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.6.jar!/:6.5.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.6.jar!/:6.5.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar!/:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.48.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-02-05T17:32:03.445Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={multipart}
+2026-02-05T17:32:03.447Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Multipart resolution previously failed for current request - skipping re-resolution for undisturbed error rendering
+2026-02-05T17:32:03.448Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-05T17:32:03.729Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-05T17:32:03.811Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Feb 05 17:32:03 GMT 2026, status=500, error=Internal Server Error, path=/route}]
+2026-02-05T17:32:04.027Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2026-02-05T22:24:06.975Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-05T22:24:07.120Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-05T22:24:07.277Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-05T22:24:07.335Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-05T22:24:07.342Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-05T22:24:07.399Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-05T22:24:07.400Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-05T22:24:07.529Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-05T22:24:07.644Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Feb 05 22:24:07 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-05T22:24:08.708Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-05T23:09:44.424Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-05T23:09:44.426Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-05T23:09:44.438Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-05T23:09:44.439Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-05T23:09:44.439Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-05T23:09:44.441Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-05T23:09:44.442Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-05T23:09:44.443Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-05T23:09:44.443Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Feb 05 23:09:44 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-05T23:09:44.505Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T00:13:09.340Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-06T00:13:12.215Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T00:13:13.046Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T00:13:14.651Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-06T00:13:14.989Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T00:13:16.738Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-06T00:13:16.754Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T00:13:17.191Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-06T00:13:17.228Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T00:13:17.522Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T00:13:17.525Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-06T00:13:17.525Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T00:13:17.608Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-06T00:13:17.610Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T00:13:19.731Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-06T00:13:19.731Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-06T00:13:20.752Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 00:13:17 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-06T00:13:20.786Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 00:13:17 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-06T00:13:22.995Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T00:13:22.995Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T00:30:44.731Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-06T00:30:44.930Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T00:30:45.163Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T00:30:45.230Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-06T00:30:45.245Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T00:30:45.338Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-06T00:30:45.339Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T00:30:45.499Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-06T00:30:45.568Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 00:30:45 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-06T00:30:45.702Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T00:30:56.472Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-06T00:30:56.473Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T00:30:56.491Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T00:30:56.492Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-06T00:30:56.492Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T00:30:56.498Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-06T00:30:56.499Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T00:30:56.519Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-06T00:30:56.520Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 00:30:56 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-06T00:30:56.528Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T00:31:43.447Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-06T00:31:43.450Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T00:31:43.473Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T00:31:43.475Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-06T00:31:43.476Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T00:31:43.517Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-06T00:31:43.520Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T00:31:43.523Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-06T00:31:43.524Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 00:31:43 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-06T00:31:43.527Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T00:39:07.705Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-06T00:39:07.706Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T00:39:07.719Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T00:39:07.720Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-06T00:39:07.720Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T00:39:07.725Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-06T00:39:07.727Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T00:39:07.729Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-06T00:39:07.730Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 00:39:07 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-06T00:39:07.738Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T04:43:24.815Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-06T04:43:25.307Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T04:43:25.820Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T04:43:25.908Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-06T04:43:25.931Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T04:43:26.074Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-06T04:43:26.076Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T04:43:26.298Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-06T04:43:26.385Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 04:43:26 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-06T04:43:26.605Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-06T05:40:03.610Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-06T05:40:03.617Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-06T05:40:03.712Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-06T05:40:03.738Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-06T05:40:03.743Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-06T05:40:03.771Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-06T05:40:03.773Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-06T05:40:03.846Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-06T05:40:03.860Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 06 05:40:03 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-06T05:40:03.875Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-08T06:40:27.948Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-08T06:40:28.161Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-08T06:40:28.385Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-08T06:40:28.521Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-08T06:40:28.536Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-08T06:40:28.738Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-08T06:40:28.740Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-08T06:40:28.964Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-08T06:40:29.027Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sun Feb 08 06:40:28 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-08T06:40:29.194Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:22:18.164Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/.env", parameters={}
+2026-02-09T05:22:18.436Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:22:19.185Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:22:19.267Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .env.]
+2026-02-09T05:22:19.305Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:22:19.436Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:22:19.438Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:22:19.636Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:22:19.736Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:22:19 GMT 2026, status=404, error=Not Found, path=/.env}]
+2026-02-09T05:22:19.990Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:22:58.235Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/config", parameters={}
+2026-02-09T05:22:58.238Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:22:58.259Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:22:58.261Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource config.]
+2026-02-09T05:22:58.262Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:22:58.306Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:22:58.307Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:22:58.523Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:22:58.525Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:22:58 GMT 2026, status=404, error=Not Found, path=/config}]
+2026-02-09T05:22:58.530Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:22:59.068Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/settings", parameters={}
+2026-02-09T05:22:59.070Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:22:59.103Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:22:59.104Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource settings.]
+2026-02-09T05:22:59.104Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:22:59.107Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:22:59.108Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:22:59.112Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:22:59.113Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:22:59 GMT 2026, status=404, error=Not Found, path=/settings}]
+2026-02-09T05:22:59.116Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:22:59.661Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/env", parameters={}
+2026-02-09T05:22:59.664Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:22:59.701Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:22:59.702Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource env.]
+2026-02-09T05:22:59.703Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:22:59.711Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:22:59.712Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:22:59.713Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:22:59.715Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:22:59 GMT 2026, status=404, error=Not Found, path=/env}]
+2026-02-09T05:22:59.722Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:23:16.321Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/contents/.env", parameters={}
+2026-02-09T05:23:16.323Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:23:16.347Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:23:16.353Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/.env.]
+2026-02-09T05:23:16.354Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:23:16.357Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:23:16.359Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:23:16.361Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:23:16.363Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:23:16 GMT 2026, status=404, error=Not Found, path=/contents/.env}]
+2026-02-09T05:23:16.411Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:23:16.953Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/contents/.env.local", parameters={}
+2026-02-09T05:23:16.956Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:23:16.973Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:23:16.974Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/.env.local.]
+2026-02-09T05:23:16.975Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:23:16.980Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:23:16.981Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:23:16.985Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:23:16.987Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:23:16 GMT 2026, status=404, error=Not Found, path=/contents/.env.local}]
+2026-02-09T05:23:16.989Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:23:17.554Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/contents/.env.production", parameters={}
+2026-02-09T05:23:17.556Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:23:17.576Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:23:17.577Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/.env.production.]
+2026-02-09T05:23:17.577Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:23:17.580Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:23:17.581Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:23:17.583Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:23:17.585Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:23:17 GMT 2026, status=404, error=Not Found, path=/contents/.env.production (truncated)...]
+2026-02-09T05:23:17.589Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T05:23:18.147Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/contents/root/.aws/credentials", parameters={}
+2026-02-09T05:23:18.149Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T05:23:18.164Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T05:23:18.165Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/root/.aws/credentials.]
+2026-02-09T05:23:18.166Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T05:23:18.171Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T05:23:18.171Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T05:23:18.174Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T05:23:18.174Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 05:23:18 GMT 2026, status=404, error=Not Found, path=/contents/root/.aws/crede (truncated)...]
+2026-02-09T05:23:18.176Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T06:30:40.577Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/.env", parameters={}
+2026-02-09T06:30:40.580Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T06:30:40.615Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T06:30:40.618Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .env.]
+2026-02-09T06:30:40.619Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T06:30:40.622Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T06:30:40.623Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T06:30:40.625Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T06:30:40.635Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 06:30:40 GMT 2026, status=404, error=Not Found, path=/.env}]
+2026-02-09T06:30:40.734Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:11:04.664Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-09T14:11:04.926Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:11:05.124Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:11:05.211Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-09T14:11:05.232Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:11:05.354Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:11:05.357Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:11:05.562Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:11:05.638Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:11:05 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-09T14:11:05.845Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:18:19.144Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/.env", parameters={}
+2026-02-09T14:18:19.147Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:18:19.167Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:18:19.168Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .env.]
+2026-02-09T14:18:19.169Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:18:19.176Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:18:19.178Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:18:19.179Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:18:19.180Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:18:19 GMT 2026, status=404, error=Not Found, path=/.env}]
+2026-02-09T14:18:19.182Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:18:59.650Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/shared/config/config.env", parameters={}
+2026-02-09T14:18:59.652Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:18:59.687Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:18:59.688Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource shared/config/config.env.]
+2026-02-09T14:18:59.690Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:18:59.694Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:18:59.705Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:18:59.707Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:18:59.708Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:18:59 GMT 2026, status=404, error=Not Found, path=/shared/config/config.env (truncated)...]
+2026-02-09T14:18:59.712Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:00.029Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/shared/config.env", parameters={}
+2026-02-09T14:19:00.031Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:00.050Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:00.051Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource shared/config.env.]
+2026-02-09T14:19:00.052Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:00.059Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:00.060Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:00.062Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:00.107Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:00 GMT 2026, status=404, error=Not Found, path=/shared/config.env}]
+2026-02-09T14:19:00.113Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:01.868Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/shared/config/.env", parameters={}
+2026-02-09T14:19:01.870Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:01.890Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:01.891Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource shared/config/.env.]
+2026-02-09T14:19:01.892Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:01.896Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:01.897Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:01.916Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:01.917Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:01 GMT 2026, status=404, error=Not Found, path=/shared/config/.env}]
+2026-02-09T14:19:01.922Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:02.222Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/shared/.env", parameters={}
+2026-02-09T14:19:02.227Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:02.243Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:02.245Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource shared/.env.]
+2026-02-09T14:19:02.246Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:02.253Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:02.255Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:02.307Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:02.307Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:02 GMT 2026, status=404, error=Not Found, path=/shared/.env}]
+2026-02-09T14:19:02.312Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:02.609Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/config.env", parameters={}
+2026-02-09T14:19:02.612Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:02.629Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:02.630Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource config.env.]
+2026-02-09T14:19:02.631Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:02.634Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:02.635Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:02.638Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:02.640Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:02 GMT 2026, status=404, error=Not Found, path=/config.env}]
+2026-02-09T14:19:02.641Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:33.423Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/config.js", parameters={}
+2026-02-09T14:19:33.425Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:33.441Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:33.443Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource config.js.]
+2026-02-09T14:19:33.443Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:33.446Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:33.448Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:33.452Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:33.453Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:33 GMT 2026, status=404, error=Not Found, path=/config.js}]
+2026-02-09T14:19:33.516Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:33.861Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/objects/codes.php.save", parameters={}
+2026-02-09T14:19:33.865Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:33.882Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:33.883Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource objects/codes.php.save.]
+2026-02-09T14:19:33.884Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:33.888Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:33.889Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:33.890Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:33.905Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:33 GMT 2026, status=404, error=Not Found, path=/objects/codes.php.save}]
+2026-02-09T14:19:33.906Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:49.143Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/config/config.yml", parameters={}
+2026-02-09T14:19:49.145Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:49.165Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:49.166Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource config/config.yml.]
+2026-02-09T14:19:49.166Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:49.169Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:49.170Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:49.171Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:49.172Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:49 GMT 2026, status=404, error=Not Found, path=/config/config.yml}]
+2026-02-09T14:19:49.176Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:57.110Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/stripe.js", parameters={}
+2026-02-09T14:19:57.116Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:57.134Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:57.147Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource stripe.js.]
+2026-02-09T14:19:57.149Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:57.154Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:57.156Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:57.157Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:57.159Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:57 GMT 2026, status=404, error=Not Found, path=/stripe.js}]
+2026-02-09T14:19:57.161Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:19:57.763Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/stripe.ts", parameters={}
+2026-02-09T14:19:57.765Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:19:57.784Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:19:57.785Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource stripe.ts.]
+2026-02-09T14:19:57.785Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:19:57.789Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:19:57.806Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:19:57.807Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:19:57.808Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:19:57 GMT 2026, status=404, error=Not Found, path=/stripe.ts}]
+2026-02-09T14:19:57.813Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:20:19.118Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/webhook.js", parameters={}
+2026-02-09T14:20:19.120Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:20:19.133Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:20:19.136Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource webhook.js.]
+2026-02-09T14:20:19.136Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:20:19.139Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:20:19.140Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:20:19.142Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:20:19.143Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:20:19 GMT 2026, status=404, error=Not Found, path=/webhook.js}]
+2026-02-09T14:20:19.145Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:21:01.613Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/v1/.env", parameters={}
+2026-02-09T14:21:01.615Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:21:01.634Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:21:01.637Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource v1/.env.]
+2026-02-09T14:21:01.638Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:21:01.642Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:21:01.661Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:21:01.665Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:21:01.667Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:21:01 GMT 2026, status=404, error=Not Found, path=/v1/.env}]
+2026-02-09T14:21:01.669Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T14:21:01.941Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/v2/.env", parameters={}
+2026-02-09T14:21:01.944Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T14:21:01.963Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T14:21:01.964Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource v2/.env.]
+2026-02-09T14:21:01.965Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T14:21:01.969Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T14:21:01.970Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T14:21:01.972Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T14:21:01.973Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 14:21:01 GMT 2026, status=404, error=Not Found, path=/v2/.env}]
+2026-02-09T14:21:01.977Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-09T19:31:13.279Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-09T19:31:13.568Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-09T19:31:13.896Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-09T19:31:14.004Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-09T19:31:14.061Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-09T19:31:14.245Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-09T19:31:14.246Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-09T19:31:14.486Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-09T19:31:14.564Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Feb 09 19:31:14 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-09T19:31:14.808Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:11:14.699Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/.env", parameters={}
+2026-02-10T04:11:14.969Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:11:15.182Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:11:15.313Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .env.]
+2026-02-10T04:11:15.342Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:11:15.498Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:11:15.500Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:11:15.712Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:11:15.787Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:11:15 GMT 2026, status=404, error=Not Found, path=/.env}]
+2026-02-10T04:11:16.029Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:11:53.498Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/config", parameters={}
+2026-02-10T04:11:53.501Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:11:53.523Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:11:53.529Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource config.]
+2026-02-10T04:11:53.531Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:11:53.541Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:11:53.543Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:11:53.545Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:11:53.547Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:11:53 GMT 2026, status=404, error=Not Found, path=/config}]
+2026-02-10T04:11:53.551Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:11:54.084Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/settings", parameters={}
+2026-02-10T04:11:54.086Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:11:54.106Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:11:54.107Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource settings.]
+2026-02-10T04:11:54.108Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:11:54.112Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:11:54.114Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:11:54.118Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:11:54.119Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:11:54 GMT 2026, status=404, error=Not Found, path=/settings}]
+2026-02-10T04:11:54.146Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:11:54.689Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/env", parameters={}
+2026-02-10T04:11:54.693Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:11:54.708Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:11:54.737Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource env.]
+2026-02-10T04:11:54.737Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:11:54.744Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:11:54.744Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:11:54.746Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:11:54.746Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:11:54 GMT 2026, status=404, error=Not Found, path=/env}]
+2026-02-10T04:11:54.749Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:12:10.759Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/contents/.env", parameters={}
+2026-02-10T04:12:10.761Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:12:10.775Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:12:10.776Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/.env.]
+2026-02-10T04:12:10.777Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:12:10.782Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:12:10.783Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:12:10.791Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:12:10.792Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:12:10 GMT 2026, status=404, error=Not Found, path=/contents/.env}]
+2026-02-10T04:12:10.795Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:12:11.333Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/contents/.env.local", parameters={}
+2026-02-10T04:12:11.335Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:12:11.347Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:12:11.348Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/.env.local.]
+2026-02-10T04:12:11.348Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:12:11.351Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:12:11.351Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:12:11.353Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:12:11.354Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:12:11 GMT 2026, status=404, error=Not Found, path=/contents/.env.local}]
+2026-02-10T04:12:11.361Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:12:11.896Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/contents/.env.production", parameters={}
+2026-02-10T04:12:11.898Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:12:11.913Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:12:11.915Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/.env.production.]
+2026-02-10T04:12:11.916Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:12:11.921Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:12:11.922Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:12:11.924Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:12:11.925Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:12:11 GMT 2026, status=404, error=Not Found, path=/contents/.env.production (truncated)...]
+2026-02-10T04:12:11.930Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:12:12.723Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/contents/root/.aws/credentials", parameters={}
+2026-02-10T04:12:12.725Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:12:12.741Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:12:12.743Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource contents/root/.aws/credentials.]
+2026-02-10T04:12:12.745Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:12:12.748Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:12:12.749Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:12:12.751Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:12:12.752Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:12:12 GMT 2026, status=404, error=Not Found, path=/contents/root/.aws/crede (truncated)...]
+2026-02-10T04:12:12.759Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T04:58:01.209Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-10T04:58:01.314Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T04:58:01.375Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T04:58:01.408Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-10T04:58:01.416Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T04:58:01.437Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T04:58:01.438Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T04:58:01.506Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T04:58:01.531Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 04:58:01 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-10T04:58:01.615Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T06:26:52.607Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-10T06:26:52.868Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T06:26:53.073Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T06:26:53.157Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-10T06:26:53.187Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T06:26:53.333Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T06:26:53.337Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T06:26:53.639Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T06:26:53.743Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 06:26:53 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-10T06:26:54.065Z DEBUG 104327 --- [parfait-report] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T09:26:30.656Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-10T09:26:30.795Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T09:26:31.029Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T09:26:31.156Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-10T09:26:31.182Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T09:26:31.370Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T09:26:31.372Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T09:26:31.742Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T09:26:31.825Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 09:26:31 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-10T09:26:32.033Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T11:17:30.025Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-10T11:17:30.028Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T11:17:30.052Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T11:17:30.054Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-10T11:17:30.107Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T11:17:30.111Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T11:17:30.113Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T11:17:30.115Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T11:17:30.117Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 11:17:30 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-10T11:17:30.120Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T11:21:13.615Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/common/code?mst_code=BANK", parameters={masked}
+2026-02-10T11:21:13.634Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T11:21:13.655Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T11:21:13.656Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource common/code.]
+2026-02-10T11:21:13.656Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T11:21:13.660Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?mst_code=BANK", parameters={masked}
+2026-02-10T11:21:13.662Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T11:21:13.719Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-02-10T11:21:13.720Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 11:21:13 GMT 2026, status=404, error=Not Found, path=/common/code}]
+2026-02-10T11:21:13.736Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2026-02-10T11:33:55.588Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", parameters={}
+2026-02-10T11:33:55.592Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-02-10T11:33:55.616Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-02-10T11:33:55.618Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php.]
+2026-02-10T11:33:55.619Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2026-02-10T11:33:55.623Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-02-10T11:33:55.624Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-02-10T11:33:55.626Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-10T11:33:55.627Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Feb 10 11:33:55 GMT 2026, status=404, error=Not Found, path=/vendor/phpunit/phpunit/s (truncated)...]
+2026-02-10T11:33:55.630Z DEBUG 104327 --- [parfait-report] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
