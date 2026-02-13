@@ -50,7 +50,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "backend/build/libs/*.jar"
-          target: "/var/www/parfait_report/backend"
+          target: "/var/www/parfait_report/app/parfait.jar"
 
       # 프론트 dist 서버 전송
       - name: Copy Frontend Build to Server
