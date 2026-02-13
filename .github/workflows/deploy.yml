@@ -22,7 +22,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      # Node 세팅 (프론트용)
+      # Node 세팅
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -42,7 +42,7 @@ jobs:
           npm ci
           npm run build
 
-      # 백엔드 jar 서버 전송
+      # 백엔드 jar 서버 전송 (경로 구조 제거)
       - name: Copy Backend Jar to Server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -51,9 +51,11 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "backend/build/libs/parfaitReport-0.0.1-SNAPSHOT.jar"
           target: "/var/www/parfait_report/app"
+          strip_components: 3
           overwrite: true
 
-      - name: Rename Jar and Restart
+      # jar 이름 변경 + 재시작
+      - name: Rename Jar and Restart Backend
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -61,10 +63,20 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /var/www/parfait_report/app
-            mv parfaitReport-0.0.1-SNAPSHOT.jar parfait.jar
+            mv -f parfaitReport-0.0.1-SNAPSHOT.jar parfait.jar
             sudo systemctl restart parfait
 
-      # 프론트 dist 서버 전송
+      # 프론트 기존 dist 삭제
+      - name: Clean Old Frontend Dist
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            rm -rf /var/www/parfait_report/frontend/dist
+
+      # 프론트 dist 업로드
       - name: Copy Frontend Build to Server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -74,24 +86,3 @@ jobs:
           source: "frontend/dist"
           target: "/var/www/parfait_report/frontend"
           overwrite: true
-
-      - name: Replace Frontend Directory
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            rm -rf /var/www/parfait_report/frontend/dist
-            mv /var/www/parfait_report/frontend/frontend/dist /var/www/parfait_report/frontend/dist
-            rm -rf /var/www/parfait_report/frontend/frontend
-
-      # 마지막에 서버 재시작
-      - name: Restart Backend Service
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            sudo systemctl restart parfait
