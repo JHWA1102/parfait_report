@@ -9,7 +9,7 @@ export default function BanlanceSheetMain() {
   const CATEGORY_DETAIL_TYPE_MAP = {
     예금: "BANK",
     적금: "BANK",
-    CMA: "BANK",
+    ISA: "SECURITIES",
     주식: "SECURITIES",
     펀드: "SECURITIES",
     부동산: "TEXT",
@@ -54,7 +54,7 @@ export default function BanlanceSheetMain() {
     const CATEGORY_DETAIL_TYPE_MAP = {
       예금: "BANK",
       적금: "BANK",
-      CMA: "BANK",
+      ISA: "SECURITIES",
       주식: "SECURITIES",
       펀드: "SECURITIES",
       부동산: "TEXT",
@@ -66,7 +66,7 @@ export default function BanlanceSheetMain() {
     const CATEGORY_COLOR_MAP = {
       예금: "E8F0FE",
       적금: "E8F0FE",
-      CMA: "E8F0FE",
+      ISA: "E8F0FE",
 
       주식: "FFF4E5",
       펀드: "FFF4E5",
@@ -172,7 +172,7 @@ export default function BanlanceSheetMain() {
     const BS_GROUP_MAP = {
       예금: "현금성자산",
       적금: "현금성자산",
-      CMA: "현금성자산",
+      ISA: "현금성자산",
 
       주식: "투자자산",
       펀드: "투자자산",

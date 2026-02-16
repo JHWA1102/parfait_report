@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="FeedMapper">
+	<select id="getFeedList" parameterType="map" resultType="map">
+		SELECT
+	        SEQ,
+	        WRITER_NO,
+	        TITLE,
+	        DBMS_LOB.SUBSTR(CONTENT, 4000, 1) AS CONTENT,
+	        REG_DT,
+	        MOD_DT
+	    FROM FEED
+	    WHERE WRITER_NO = #{writerNo}
+	    AND PASSWORD = #{password}
+	    ORDER BY REG_DT DESC
+	</select>
+
+	
+    <insert id="registFeed" parameterType="map" useGeneratedKeys="true" keyProperty="seq">
+	    INSERT INTO FEED (
+	        WRITER_NO,
+	        PASSWORD,
+	        TITLE,
+	        CONTENT,
+	        REG_DT
+	    )
+	    VALUES (
+	        #{writerNo},
+	        #{password},
+	        #{title},
+	        #{content},
+	        SYSDATE
+	    )		
+    </insert>
+</mapper>
+
+

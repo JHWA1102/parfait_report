@@ -15,7 +15,7 @@ export default function AssetInputList({
   const CATEGORY_OPTIONS = [
     { value: "예금", detailType: "BANK" },
     { value: "적금", detailType: "BANK" },
-    { value: "CMA", detailType: "BANK" },
+    { value: "ISA", detailType: "SECURITIES" },
     { value: "주식", detailType: "SECURITIES" },
     { value: "펀드", detailType: "SECURITIES" },
     { value: "부동산", detailType: "TEXT" },
