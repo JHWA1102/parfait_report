@@ -6,15 +6,24 @@ export default function Header({ onMenuClick }) {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const token = localStorage.getItem("accessToken");
+  const isLoggedIn = !!token;
+
   const menus = [
-    { name: "재무상태표", path: "/balance-sheet" },
-    { name: "월간자금관리", path: "/monthly-finance" },
-    { name: "피드", path: "/feed" },
+    { name: "자산현황", path: "/balance-sheet" },
+    { name: "자금설계", path: "/monthly-finance" },
+    { name: "경제노트", path: "/feed" },
+    { name: "자금동향(개인사업자)", path: "/flow-register" },
   ];
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    navigate("/login");
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full h-16 bg-white/90 backdrop-blur border-b border-slate-100 z-[100]">
-      <div className="h-full max-w-6xl mx-3 px-6 flex items-center">
+      <div className="h-full max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Left group: Logo + Menu */}
         <div className="flex items-center gap-12">
           {/* Logo */}
@@ -58,7 +67,57 @@ export default function Header({ onMenuClick }) {
         </div>
 
         {/* Right */}
-        <div className="ml-auto">
+        <div className="flex items-center gap-4">
+          {/* 로그인 / 로그아웃 버튼 */}
+          {!isLoggedIn ? (
+            <button
+              onClick={() => navigate("/login")}
+              className="
+                hidden md:inline-flex
+                px-4 py-2
+                !bg-white
+                text-slate-700
+                rounded-lg
+                hover:bg-slate-50
+                transition
+              "
+            >
+              로그인
+            </button>
+          ) : (
+            <>
+              <button
+                onClick={() => navigate("/dashboard")}
+                className="
+                  hidden md:inline-flex
+                  px-4 py-2
+                  !bg-white
+                  text-slate-700
+                  rounded-lg
+                  hover:bg-slate-50
+                  transition
+                "
+              >
+                마이페이지
+              </button>
+
+              <button
+                onClick={handleLogout}
+                className="
+                  hidden md:inline-flex
+                  px-4 py-2
+                  !bg-white
+                  text-slate-700
+                  rounded-lg
+                  hover:bg-slate-50
+                  transition
+                "
+              >
+                로그아웃
+              </button>
+            </>
+          )}
+
           {/* Mobile hamburger */}
           <div
             onClick={onMenuClick}

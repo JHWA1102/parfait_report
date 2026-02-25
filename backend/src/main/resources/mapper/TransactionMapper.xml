@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="TransactionMapper">
+
+    <insert id="insertTransaction" parameterType="map">
+        INSERT INTO TRANSACTIONS (
+            USER_ID,
+            TYPE,
+            SUB_TYPE,
+            CATEGORY,
+            PAYMENT_METHOD,
+            AMOUNT,
+            COMPANY,
+            MEMO,
+            TX_DATE,
+            DEL_YN,
+            CREATED_AT
+        ) VALUES (
+            #{userId},
+            #{type},
+            #{subType},
+            #{category},
+            #{paymentMethod},
+            #{amount},
+            #{company},
+            #{memo},
+            TO_DATE(#{date}, 'YYYY-MM-DD'),
+            'N',
+            SYSDATE
+        )
+    </insert>
+
+</mapper>
