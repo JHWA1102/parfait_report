@@ -72,15 +72,7 @@ export default function Header({ onMenuClick }) {
           {!isLoggedIn ? (
             <button
               onClick={() => navigate("/login")}
-              className="
-                hidden md:inline-flex
-                px-4 py-2
-                !bg-white
-                text-slate-700
-                rounded-lg
-                hover:bg-slate-50
-                transition
-              "
+              className="btn-base !bg-white"
             >
               로그인
             </button>

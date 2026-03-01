@@ -428,7 +428,7 @@ export default function BanlanceSheetMain() {
 
   return (
     <div>
-      <div className="w-full w-full max-w-2xl mx-auto mt-10">
+      <div className="w-full max-w-2xl mx-auto mt-10 ">
         {/* <BankInputList onChangeRows={setRows} onChangeBankList={setBankList} /> */}
         <AssetInputList
           values={assetValues}
@@ -438,10 +438,10 @@ export default function BanlanceSheetMain() {
         />
         <button
           onClick={exportToExcel}
-          className="inline-flex items-center gap-1 bg-green-500 px-3 py-2 rounded-md hover:bg-green-600 mt-5"
+          className="btn-base flex items-center gap-2 px-4 py-2 cursor-pointer mb-10"
         >
           <ArrowDownTrayIcon className="h-4 w-4" />
-          엑셀 다운로드
+          <span>엑셀 다운로드</span>
         </button>
       </div>
     </div>

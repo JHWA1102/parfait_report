@@ -86,7 +86,7 @@ export default function FlowRegister() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 pt-20 px-4">
+    <div className="min-h-screen bg-slate-100 pt-10 px-4 pb-10">
       <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm p-10">
         <h2 className="text-2xl font-semibold text-slate-900 mb-8">
           자금 흐름 등록
@@ -227,10 +227,7 @@ export default function FlowRegister() {
         </div>
 
         {/* 저장 버튼 */}
-        <button
-          onClick={handleSubmit}
-          className="w-full py-3 bg-slate-900 rounded-lg font-semibold hover:bg-slate-800 transition"
-        >
+        <button onClick={handleSubmit} className="btn-base w-full">
           저장하기
         </button>
       </div>

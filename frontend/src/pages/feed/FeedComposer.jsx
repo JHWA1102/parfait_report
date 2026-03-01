@@ -84,10 +84,7 @@ export default function FeedComposer() {
       />
 
       <div className="mt-3 flex justify-end">
-        <button
-          onClick={handleSubmit}
-          className="text-sm font-medium text-slate-600 hover:text-slate-900"
-        >
+        <button onClick={handleSubmit} className="btn-base bg-white text-sm">
           기록하기
         </button>
       </div>

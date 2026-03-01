@@ -121,7 +121,7 @@ export default function AssetInputList({
             <button
               type="button"
               onClick={() => removeRow(idx)}
-              className="text-red-500 self-end md:self-auto"
+              className="btn-base bg-white text-red-500 self-end md:self-auto"
             >
               ✕
             </button>
@@ -133,7 +133,10 @@ export default function AssetInputList({
       <button
         type="button"
         onClick={addRow}
-        className="w-full border rounded-md py-2 hover:bg-gray-50"
+        className="w-full border border-transparent rounded-md py-2 mb-5 cursor-pointer 
+             text-black bg-[#f9f9f9] 
+             hover:border-[#94A3B8] 
+             transition-colors duration-200"
       >
         + 항목 추가
       </button>

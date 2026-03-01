@@ -50,7 +50,7 @@ export default function FeedPage() {
 
           <button
             onClick={() => setShowInput((prev) => !prev)}
-            className="text-sm font-medium text-slate-600 hover:text-slate-900"
+            className="btn-base"
           >
             불러오기
           </button>

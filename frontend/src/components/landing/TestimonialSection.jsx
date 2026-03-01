@@ -76,17 +76,11 @@ export default function TestimonialSection() {
 
           {/* 버튼 */}
           <div className="absolute bottom-8 right-8 flex gap-3">
-            <button
-              onClick={prev}
-              className="w-10 h-10 rounded-lg border border-slate-300 flex items-center justify-center hover:bg-slate-100"
-            >
+            <button onClick={prev} className="btn-base">
               ←
             </button>
 
-            <button
-              onClick={next}
-              className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-slate-800"
-            >
+            <button onClick={next} className="btn-base">
               →
             </button>
           </div>

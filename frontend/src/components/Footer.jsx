@@ -27,13 +27,14 @@ export default function Footer() {
                 월간 자산관리 팁 받기
               </h4>
 
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col gap-3">
                 <input
                   type="email"
                   placeholder="이메일 주소 입력"
                   className="bg-transparent border-b border-slate-600 focus:border-slate-400 outline-none py-2 text-sm w-full"
                 />
-                <button className="!border !border-slate-500 !px-4 !py-2 !rounded-full !text-sm !hover:bg-slate-700 !transition">
+
+                <button className="border border-slate-500 px-7 py-1 rounded-full text-sm hover:bg-slate-700 transition cursor-pointer">
                   구독하기
                 </button>
               </div>

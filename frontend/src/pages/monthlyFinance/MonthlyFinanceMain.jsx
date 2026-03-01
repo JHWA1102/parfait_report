@@ -24,7 +24,7 @@ export default function MonthlyFinanceMain() {
   const exportToExcel = () => {
     const totalFixedCost = fixedCosts.reduce(
       (sum, cost) => sum + Number(cost.amount || 0),
-      0
+      0,
     );
 
     const remainingMoney = Number(salary || 0) - totalFixedCost;
@@ -173,7 +173,7 @@ export default function MonthlyFinanceMain() {
 
   return (
     <div>
-      <div className="w-full w-full max-w-2xl mx-auto mt-10">
+      <div className="w-full w-full max-w-2xl mx-auto mt-10 mb-10">
         <div className="border border-gray-300 rounded-md p-6 bg-white">
           {/* 월급 */}
           <div className="mb-6 relative">
@@ -238,7 +238,7 @@ export default function MonthlyFinanceMain() {
             <button
               type="button"
               onClick={addFixedCost}
-              className="mt-2 border rounded-md py-2 hover:bg-gray-50"
+              className="btn-base mt-5"
             >
               + 고정비 추가
             </button>
@@ -246,7 +246,7 @@ export default function MonthlyFinanceMain() {
 
           <button
             onClick={exportToExcel}
-            className="inline-flex items-center gap-1 bg-green-500 px-3 py-2 rounded-md hover:bg-green-600"
+            className="btn-base flex items-center gap-2 px-4 py-2 cursor-pointer"
           >
             <ArrowDownTrayIcon className="h-4 w-4" />
             엑셀 다운로드
