@@ -40,7 +40,7 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100 px-4 pt-16">
+    <div className="min-h-screen flex justify-center bg-slate-100 px-4 pt-11 pb-12">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-sm p-8">
         {/* 타이틀 */}
         <h2 className="text-2xl font-semibold text-slate-900 text-center mb-2">
@@ -105,10 +105,7 @@ export default function Signup() {
         </div>
 
         {/* 가입 버튼 */}
-        <button
-          onClick={handleSignup}
-          className="w-full py-2.5 bg-slate-900 rounded-lg font-semibold hover:bg-slate-800 transition"
-        >
+        <button onClick={handleSignup} className="btn-base w-full">
           회원가입
         </button>
 

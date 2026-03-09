@@ -60,4 +60,26 @@ h1 {
   a:hover {
     color: #94A3B8;
   }
+
+  /* dropdown scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;   /* 연한 회색 */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;   /* hover 시 조금 진하게 */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  * {
+  overscroll-behavior: contain;
+  }
 }

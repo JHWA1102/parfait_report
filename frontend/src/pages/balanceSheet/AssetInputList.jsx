@@ -1,6 +1,7 @@
 // src/components/AssetInputList.jsx
 import React from "react";
 import BankSelect from "./BankSelect";
+import CategorySelect from "../../components/common/CategorySelect";
 
 export default function AssetInputList({
   values = [],
@@ -10,7 +11,7 @@ export default function AssetInputList({
 }) {
   const baseInputClass =
     "h-11 w-full border border-gray-300 rounded-lg text-sm " +
-    "focus:border-indigo-600 focus:ring-indigo-600 outline-none";
+    "focus:border-slate-400 focus:ring-slate-400 outline-none";
 
   const CATEGORY_OPTIONS = [
     { value: "예금", detailType: "BANK" },
@@ -20,7 +21,8 @@ export default function AssetInputList({
     { value: "펀드", detailType: "SECURITIES" },
     { value: "부동산", detailType: "TEXT" },
     { value: "연금", detailType: "TEXT" },
-    { value: "대출", detailType: "TEXT" },
+    { value: "대출 (단기)", detailType: "TEXT" },
+    { value: "대출 (장기)", detailType: "TEXT" },
   ];
 
   const addRow = () => {
@@ -49,6 +51,28 @@ export default function AssetInputList({
     return value.replace(/[^\d]/g, "");
   };
 
+  const renderDetailInput = (detailType, row, idx) => {
+    if (detailType === "BANK" || detailType === "SECURITIES") {
+      return (
+        <BankSelect
+          value={row.detail}
+          bankList={detailType === "BANK" ? bankList : securitiesList}
+          onChange={(val) => updateRow(idx, "detail", val)}
+          className={baseInputClass}
+        />
+      );
+    }
+
+    return (
+      <input
+        value={row.detail}
+        onChange={(e) => updateRow(idx, "detail", e.target.value)}
+        placeholder="상세내역"
+        className={`${baseInputClass} px-4`}
+      />
+    );
+  };
+
   return (
     <div className="space-y-3">
       {values.map((row, idx) => {
@@ -59,43 +83,21 @@ export default function AssetInputList({
             key={idx}
             className="flex flex-col md:flex-row md:items-center gap-2 bg-white border border-gray-300 rounded-md p-3"
           >
-            {/* 항목 */}
-            <select
+            {/* Category */}
+            <CategorySelect
               value={row.category}
-              onChange={(e) => updateRow(idx, "category", e.target.value)}
-              className="py-3 px-4 block border border-gray-300 rounded-lg text-sm focus:border-indigo-600 focus:ring-indigo-600 outline-none"
-            >
-              {CATEGORY_OPTIONS.map((c) => (
-                <option key={c.value} value={c.value}>
-                  {c.value}
-                </option>
-              ))}
-            </select>
-            <div
-              className={
-                detailType === "TEXT" ? "w-full md:w-[80%]" : "w-full md:flex-1"
-              }
-            >
-              {/* 상세내역 */}
-              {detailType === "BANK" || detailType === "SECURITIES" ? (
-                <BankSelect
-                  value={row.detail}
-                  bankList={detailType === "BANK" ? bankList : securitiesList}
-                  onChange={(val) => updateRow(idx, "detail", val)}
-                  className={`${baseInputClass}`}
-                />
-              ) : (
-                <input
-                  value={row.detail}
-                  onChange={(e) => updateRow(idx, "detail", e.target.value)}
-                  placeholder="상세내역"
-                  className={`${baseInputClass} px-4`}
-                />
-              )}
+              options={CATEGORY_OPTIONS}
+              onChange={(val) => updateRow(idx, "category", val)}
+              className="w-full md:w-[140px]"
+            />
+
+            {/* Detail */}
+            <div className="flex-1">
+              {renderDetailInput(detailType, row, idx)}
             </div>
 
-            {/* 금액 */}
-            <div className="relative w-full">
+            {/* Amount */}
+            <div className="relative w-full md:w-[180px]">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">
                 ₩
               </span>
@@ -110,18 +112,18 @@ export default function AssetInputList({
                   h-11 w-full pl-8 pr-3
                   border border-gray-300 rounded-lg text-sm
                   text-right
-                  focus:border-indigo-600 focus:ring-indigo-600
+                  focus:border-slate-400 focus:ring-slate-400
                   outline-none
                 "
                 placeholder="0"
               />
             </div>
 
-            {/* 삭제 버튼 ❗ type 지정 */}
+            {/* Delete */}
             <button
               type="button"
               onClick={() => removeRow(idx)}
-              className="btn-base bg-white text-red-500 self-end md:self-auto"
+              className="text-red-500 text-lg px-2 self-end md:self-auto"
             >
               ✕
             </button>
@@ -129,14 +131,16 @@ export default function AssetInputList({
         );
       })}
 
-      {/* 추가 버튼 ❗ type 지정 */}
+      {/* Add Row */}
       <button
         type="button"
         onClick={addRow}
-        className="w-full border border-transparent rounded-md py-2 mb-5 cursor-pointer 
-             text-black bg-[#f9f9f9] 
-             hover:border-[#94A3B8] 
-             transition-colors duration-200"
+        className="
+          w-full border border-transparent rounded-md py-2 mb-5 cursor-pointer 
+          text-black bg-[#f9f9f9] 
+          hover:border-[#94A3B8] 
+          transition-colors duration-200
+        "
       >
         + 항목 추가
       </button>

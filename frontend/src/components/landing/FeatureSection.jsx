@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function FeatureSection() {
   return (
     <section className="bg-white py-28">
@@ -20,7 +22,12 @@ export default function FeatureSection() {
           {/* 왼쪽 큰 카드 */}
           <div className="md:col-span-1 bg-[#EEF3F1] rounded-3xl p-8 flex flex-col justify-between shadow-sm">
             {/* 이미지 자리 */}
-            <div className="bg-white/60 rounded-2xl h-48 mb-8"></div>
+            <div className="bg-white/60 rounded-2xl h-48 mb-8">
+              <img
+                src="/images/featureImg1.png"
+                className="rounded-2xl w-full h-full"
+              />
+            </div>
 
             {/* 아이콘 */}
             <div className="w-12 h-12 flex items-center justify-center rounded-full bg-orange-400 text-white text-xl mb-4">
@@ -35,28 +42,42 @@ export default function FeatureSection() {
               은행, 증권, 부동산 등 모든 자산을 한눈에 파악하세요. 카테고리별
               분류와 실시간 업데이트로 정확한 자산 현황을 확인할 수 있습니다.
             </p>
-
-            <button className="text-orange-400 font-medium hover:underline">
+            <Link
+              to="/balance-sheet"
+              className="!text-orange-400 font-medium ml-20 hover:underline"
+            >
               자세히 보기 →
-            </button>
+            </Link>
           </div>
 
           {/* 가운데 카드 */}
           <div className="bg-[#F8F9FA] rounded-3xl p-8 shadow-sm flex flex-col">
             <h3 className="text-lg font-semibold text-slate-900 mb-6">
-              월간자금리포트
+              자금설계
             </h3>
 
-            {/* 이미지 자리 */}
-            <div className="bg-white rounded-2xl flex-1 min-h-[280px] shadow-inner"></div>
+            <div className="bg-white rounded-2xl shadow-inner overflow-hidden aspect-[9/16]">
+              <img
+                src="/images/featureImg2.png"
+                className="w-full h-full object-contain"
+                alt="feature"
+              />
+            </div>
           </div>
 
           {/* 오른쪽 카드 */}
           <div className="bg-[#F8F9FA] rounded-3xl p-8 shadow-sm flex flex-col">
-            <h3 className="text-lg font-semibold text-slate-900 mb-6">피드</h3>
+            <h3 className="text-lg font-semibold text-slate-900 mb-6">
+              경제노트
+            </h3>
 
-            {/* 이미지 자리 */}
-            <div className="bg-white rounded-2xl flex-1 min-h-[280px] shadow-inner"></div>
+            <div className="bg-white rounded-2xl shadow-inner overflow-hidden aspect-[9/16]">
+              <img
+                src="/images/featureImg3.png"
+                className="w-full h-full object-contain"
+                alt="feature"
+              />
+            </div>
           </div>
         </div>
       </div>

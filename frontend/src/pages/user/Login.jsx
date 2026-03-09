@@ -58,10 +58,7 @@ export default function Login() {
         </div>
 
         {/* 로그인 버튼 */}
-        <button
-          onClick={handleLogin}
-          className="w-full py-2.5 bg-slate-900 rounded-lg font-semibold hover:bg-slate-800 transition"
-        >
+        <button onClick={handleLogin} className="btn-base w-full">
           로그인
         </button>
 

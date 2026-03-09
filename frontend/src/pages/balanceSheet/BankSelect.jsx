@@ -15,7 +15,7 @@ export default function BankSelect({
     query === ""
       ? bankList
       : bankList.filter((b) =>
-          b.SUB_NM.toLowerCase().includes(query.toLowerCase())
+          b.SUB_NM.toLowerCase().includes(query.toLowerCase()),
         );
 
   const selectedBank = bankList.find((b) => b.SUB_CD === value);
@@ -32,12 +32,12 @@ export default function BankSelect({
   }, []);
 
   return (
-    <div className="relative w-50" ref={inputRef}>
+    <div className="relative w-full" ref={inputRef}>
       {/* 검색 인풋 */}
       <div className="relative">
         <input
           type="text"
-          className="h-11 px-10 block w-full border border-gray-300 rounded-lg text-sm focus:border-indigo-600 focus:ring-indigo-600 outline-none"
+          className="h-11 px-10 block w-full border border-gray-300 rounded-lg text-sm focus:border-slate-400 focus:ring-slate-400 outline-none"
           placeholder="은행 검색"
           value={query || (selectedBank?.SUB_NM ?? "")}
           onChange={(e) => {

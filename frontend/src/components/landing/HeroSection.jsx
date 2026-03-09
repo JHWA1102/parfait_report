@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <section className="min-h-screen bg-[#f4f6f8] flex items-center overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-50 items-center">
         {/* LEFT TEXT */}
         <div>
           <div className="inline-flex items-center bg-slate-200 text-slate-700 text-sm px-3 py-1 rounded-full mb-6">
@@ -32,13 +32,13 @@ export default function HeroSection() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-[520px] rounded-3xl shadow-2xl"
+            className="w-[420px] rounded-3xl shadow-2xl"
             style={{ transformStyle: "preserve-3d" }}
           >
             <img
-              src="/images/dashboard-preview.jpg"
+              src="/images/dashboard-preview.png"
               alt="Dashboard Preview"
-              className="rounded-3xl w-full"
+              className="rounded-2xl w-full max-h-[500px]"
             />
           </motion.div>
         </div>

@@ -10,6 +10,8 @@ import FeedPage from "./pages/feed/FeedPage";
 import Signup from "./pages/user/Signup";
 import Login from "./pages/user/Login";
 import FlowRegister from "./pages/FinanceFlow/FlowRegister";
+import PrivacyPolicy from "./pages/user/PrivacyPolicy";
+import TermsOfService from "./pages/user/TermsOfService";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="flow-register" element={<FlowRegister />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Route>
       </Routes>
     </>

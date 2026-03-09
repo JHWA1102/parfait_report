@@ -18,11 +18,7 @@ export default function BanlanceSheetMain() {
     장기부채: "TEXT",
   };
 
-  // 🔹 코드 리스트 (은행 코드 등)
-  const [codes, setCodes] = useState([]);
-
   // 🔹 입력된 행 데이터 (은행 + 금액)
-  const [rows, setRows] = useState([]);
   const [bankList, setBankList] = useState([]);
   const [securitiesList, setSecuritiesList] = useState([]);
 
@@ -74,8 +70,8 @@ export default function BanlanceSheetMain() {
       부동산: "E9F7EF",
       연금: "E9F7EF",
 
-      단기부채: "FDECEA",
-      장기부채: "FADBD8",
+      "대출 (단기)": "FDECEA",
+      "대출 (장기)": "FADBD8",
     };
 
     const sum = (arr) => arr.reduce((a, b) => a + b.amount, 0);
@@ -180,8 +176,8 @@ export default function BanlanceSheetMain() {
 
       연금: "은퇴자산",
 
-      단기부채: "단기부채",
-      장기부채: "장기부채",
+      "대출 (단기)": "단기부채",
+      "대출 (장기)": "장기부채",
     };
 
     const bs = {
@@ -209,8 +205,8 @@ export default function BanlanceSheetMain() {
 
       // 부채 영역
       if (colIndex >= 2) {
-        if (debtLabel.includes("단기")) return "FCEFE3";
-        if (debtLabel.includes("장기")) return "FCEFE3";
+        if (debtLabel.includes("단기 부채")) return "FCEFE3";
+        if (debtLabel.includes("장기 부채")) return "FCEFE3";
         if (debtLabel === "부채 합계") return "F9E4D8";
         if (debtLabel.includes("자본")) return "E6F4EA";
       }
@@ -240,23 +236,39 @@ export default function BanlanceSheetMain() {
     const debtTotal = sum(bs.단기부채) + sum(bs.장기부채);
     const netAsset = assetTotal - debtTotal;
 
+    const maxCashRows = Math.max(bs.현금성자산.length, bs.단기부채.length);
+
+    const cashRows = Array.from({ length: maxCashRows }).map((_, i) => [
+      bs.현금성자산[i]?.label || "",
+      bs.현금성자산[i]?.amount || "",
+      bs.단기부채[i]?.label || "",
+      bs.단기부채[i]?.amount || "",
+    ]);
+
+    const maxInvestRows = Math.max(bs.투자자산.length, bs.장기부채.length);
+
+    const investRows = Array.from({ length: maxInvestRows }).map((_, i) => [
+      bs.투자자산[i]?.label || "",
+      bs.투자자산[i]?.amount || "",
+      bs.장기부채[i]?.label || "",
+      bs.장기부채[i]?.amount || "",
+    ]);
+
     const sheet2Data = [
       ["재무제표(B/S)", "", "", ""],
       ["항목", "금액", "항목", "금액"],
 
       ["현금성 자산", "", "단기 부채", ""],
-      ...bs.현금성자산.map((v) => [v.label, v.amount, "", ""]),
-      ...bs.단기부채.map((v) => ["", "", v.label, v.amount]),
+      ...cashRows,
       ["소계", sum(bs.현금성자산), "소계", sum(bs.단기부채)],
 
       ["투자 자산", "", "장기 부채", ""],
-      ...bs.투자자산.map((v) => [v.label, v.amount, "", ""]),
-      ...bs.장기부채.map((v) => ["", "", v.label, v.amount]),
-      ["소계", sum(bs.투자자산), "소계", sum(bs.장기부채)],
+      ...investRows,
+      ["소계", sum(bs.투자자산), "", ""],
 
       ["은퇴 자산", "", "", ""],
       ...bs.은퇴자산.map((v) => [v.label, v.amount, "", ""]),
-      ["소계", sum(bs.은퇴자산), "", ""],
+      ["소계", sum(bs.은퇴자산), "소계", sum(bs.장기부채)],
 
       ["자산 합계", "", "부채 합계", ""],
       ["", "", debtTotal, ""],
@@ -429,7 +441,6 @@ export default function BanlanceSheetMain() {
   return (
     <div>
       <div className="w-full max-w-2xl mx-auto mt-10 ">
-        {/* <BankInputList onChangeRows={setRows} onChangeBankList={setBankList} /> */}
         <AssetInputList
           values={assetValues}
           onChange={setAssetValues}

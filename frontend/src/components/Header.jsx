@@ -72,7 +72,7 @@ export default function Header({ onMenuClick }) {
           {!isLoggedIn ? (
             <button
               onClick={() => navigate("/login")}
-              className="btn-base !bg-white"
+              className="btn-base bg-inherit"
             >
               로그인
             </button>

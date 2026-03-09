@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-[#0F172A] text-slate-300 pt-20 pb-10">
@@ -22,7 +24,7 @@ export default function Footer() {
             </p>
 
             {/* 뉴스레터 */}
-            <div>
+            {/* <div>
               <h4 className="text-white font-medium mb-4">
                 월간 자산관리 팁 받기
               </h4>
@@ -38,7 +40,7 @@ export default function Footer() {
                   구독하기
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* 우측 메뉴 영역 */}
@@ -47,19 +49,43 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-semibold mb-4">서비스</h4>
               <ul className="space-y-3 text-sm text-slate-400">
-                <li className="hover:text-white cursor-pointer">
-                  내 자산 파악하기
+                <li>
+                  <Link
+                    to="/balance-sheet"
+                    className="!text-slate-400 hover:!text-white cursor-pointer"
+                  >
+                    자산현황
+                  </Link>
                 </li>
-                <li className="hover:text-white cursor-pointer">
-                  월간자금리포트
+                <li>
+                  <Link
+                    to="/monthly-finance"
+                    className="!text-slate-400 hover:!text-white cursor-pointer"
+                  >
+                    자금설계
+                  </Link>
                 </li>
-                <li className="hover:text-white cursor-pointer">피드</li>
-                <li className="hover:text-white cursor-pointer">요금제</li>
+                <li>
+                  <Link
+                    to="/feed"
+                    className="!text-slate-400 hover:!text-white cursor-pointer"
+                  >
+                    경제노트
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/flow-register"
+                    className="!text-slate-400 hover:!text-white cursor-pointer"
+                  >
+                    자금동향
+                  </Link>
+                </li>
               </ul>
             </div>
 
             {/* 회사 */}
-            <div>
+            {/* <div>
               <h4 className="text-white font-semibold mb-4">회사</h4>
               <ul className="space-y-3 text-sm text-slate-400">
                 <li className="hover:text-white cursor-pointer">회사 소개</li>
@@ -67,18 +93,31 @@ export default function Footer() {
                 <li className="hover:text-white cursor-pointer">채용</li>
                 <li className="hover:text-white cursor-pointer">문의하기</li>
               </ul>
-            </div>
+            </div> */}
 
             {/* 법적 고지 */}
             <div>
               <h4 className="text-white font-semibold mb-4">법적 고지</h4>
               <ul className="space-y-3 text-sm text-slate-400">
-                <li className="hover:text-white cursor-pointer">이용약관</li>
-                <li className="hover:text-white cursor-pointer">
-                  개인정보처리방침
+                <li>
+                  <Link
+                    to="/privacy-policy"
+                    className="!text-slate-400 hover:!text-white cursor-pointer"
+                  >
+                    개인정보처리방침
+                  </Link>
                 </li>
-                <li className="hover:text-white cursor-pointer">보안정책</li>
-                <li className="hover:text-white cursor-pointer">쿠키 정책</li>
+                <li>
+                  <Link
+                    to="/terms-of-service"
+                    className="!text-slate-400 hover:!text-white cursor-pointer"
+                  >
+                    이용약관
+                  </Link>
+                </li>
+
+                {/* <li className="hover:text-white cursor-pointer">보안정책</li> */}
+                {/* <li className="hover:text-white cursor-pointer">쿠키 정책</li> */}
               </ul>
             </div>
           </div>
